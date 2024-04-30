@@ -1,0 +1,2407 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise AI v0.01, ai.mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo5.png" type="image/x-icon">
+  <meta name="description" content="Creating a website with chatbot, form, and mental health report functions.">
+
+  <title>Interactive Website Functions</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/parallax/jarallax.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/animatecss/animate.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap">
+  </noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/additional.css">
+  <link rel="stylesheet" href="assets/mobirise/css/additional.css" type="text/css">
+
+  <style>
+    :root {
+      --background: #FEF1EA;
+      --dominant-color: #F3722C;
+      --primary-color: #90BE6D;
+      --secondary-color: #277DA1;
+      --success-color: #27D182;
+      --danger-color: #D32535;
+      --warning-color: #F8BA00;
+      --info-color: #0DC6EB;
+      --background-text: #000000;
+      --dominant-text: #000000;
+      --primary-text: #000000;
+      --secondary-text: #FFFFFF;
+      --success-text: #000000;
+      --danger-text: #FFFFFF;
+      --warning-text: #000000;
+      --info-text: #000000;
+    }
+    .cid-u83u4ljVIT {
+      z-index: 1000;
+      width: 100%;
+      position: relative;
+    }
+
+    .cid-u83u4ljVIT .dropdown-item:before {
+      font-family: Moririse2 !important;
+      content: "\e966";
+      display: inline-block;
+      width: 0;
+      position: absolute;
+      left: 1rem;
+      top: 0.5rem;
+      margin-right: 0.5rem;
+      line-height: 1;
+      font-size: inherit;
+      vertical-align: middle;
+      text-align: center;
+      overflow: hidden;
+      transform: scale(0, 1);
+      transition: all 0.25s ease-in-out;
+    }
+
+    @media (max-width: 767px) {
+      .cid-u83u4ljVIT .navbar-toggler {
+        transform: scale(0.8);
+      }
+    }
+
+    .cid-u83u4ljVIT .navbar-brand {
+      flex-shrink: 0;
+      align-items: center;
+      margin-right: 0;
+      padding: 10px 0;
+      transition: all 0.3s;
+      word-break: break-word;
+      z-index: 1;
+    }
+
+    .cid-u83u4ljVIT .navbar-brand img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .cid-u83u4ljVIT .navbar-brand .navbar-caption {
+      line-height: inherit !important;
+    }
+
+    .cid-u83u4ljVIT .navbar-brand .navbar-logo a {
+      outline: none;
+    }
+
+    .cid-u83u4ljVIT .navbar-nav {
+      margin: auto;
+      margin-left: 0;
+      margin-left: auto;
+    }
+
+    .cid-u83u4ljVIT .navbar-nav .nav-item {
+      padding: 0 !important;
+      transition: 0.3s all !important;
+    }
+
+    .cid-u83u4ljVIT .navbar-nav .nav-item .nav-link {
+      padding: 16px !important;
+      margin: 0 !important;
+      border-radius: 1rem !important;
+      transition: 0.3s all !important;
+    }
+
+    .cid-u83u4ljVIT .navbar-nav .nav-item .nav-link:hover {
+      background-color: rgba(27, 31, 10, 0.06);
+    }
+
+    .cid-u83u4ljVIT .navbar-nav .open .nav-link::after {
+      transform: rotate(180deg);
+    }
+
+    @media (min-width: 992px) {
+      .cid-u83u4ljVIT .navbar-nav .open .nav-link::before {
+        content: "";
+        width: 100%;
+        height: 20px;
+        top: 100%;
+        background: transparent;
+        position: absolute;
+      }
+    }
+
+    .cid-u83u4ljVIT .navbar-nav .dropdown-item {
+      padding: 12px !important;
+      border-radius: 0.5rem !important;
+      margin: 0 8px !important;
+      transition: 0.3s all !important;
+    }
+
+    .cid-u83u4ljVIT .navbar-nav .dropdown-item:hover {
+      background-color: rgba(27, 31, 10, 0.06);
+    }
+
+    @media (min-width: 992px) {
+      .cid-u83u4ljVIT .navbar-nav {
+        padding-left: 1.5rem;
+      }
+    }
+
+    .cid-u83u4ljVIT .nav-link {
+      width: fit-content;
+      position: relative;
+    }
+
+    .cid-u83u4ljVIT .navbar-logo {
+      margin: 0 !important;
+    }
+
+    @media (max-width: 767px) {
+      .cid-u83u4ljVIT .navbar-logo {
+        padding-left: 0;
+      }
+    }
+
+    .cid-u83u4ljVIT .navbar-caption {
+      padding-left: 1rem;
+      padding-right: 0.5rem;
+    }
+
+    @media (max-width: 767px) {
+      .cid-u83u4ljVIT .nav-dropdown {
+        padding-bottom: 0.5rem;
+      }
+    }
+
+    .cid-u83u4ljVIT .nav-dropdown .link.dropdown-toggle::after {
+      margin-left: 0.5rem;
+      margin-top: 0.2rem;
+      transition: 0.3s all;
+    }
+
+    .cid-u83u4ljVIT .container {
+      display: flex;
+      height: 90px;
+      padding: 0.5rem 0.6rem;
+      flex-wrap: nowrap;
+      background: rgba(255, 255, 255, 0.8) !important;
+      left: 0;
+      right: 0;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: flex-end;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-radius: 100vw;
+      margin-top: 1rem;
+      background-color: #ffffff;
+      box-shadow: 0 30px 60px 0 rgba(27, 31, 10, 0.08);
+    }
+
+    @media (max-width: 992px) {
+      .cid-u83u4ljVIT .container {
+        padding-right: 2rem;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .cid-u83u4ljVIT .container {
+        width: 95%;
+        height: 56px !important;
+        padding-right: 1rem;
+        margin-top: 0rem;
+      }
+    }
+
+    .cid-u83u4ljVIT .iconfont-wrapper {
+      color: #000000 !important;
+      font-size: 1.5rem;
+      padding-right: 0.5rem;
+    }
+
+    .cid-u83u4ljVIT .dropdown-menu {
+      flex-wrap: wrap;
+      flex-direction: column;
+      max-width: 100%;
+      padding: 12px 4px !important;
+      border-radius: 1.5rem;
+      transition: 0.3s all !important;
+      min-width: auto;
+      background: #ffffff;
+      background: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    .cid-u83u4ljVIT .nav-item:focus,
+    .cid-u83u4ljVIT .nav-link:focus {
+      outline: none;
+    }
+
+    .cid-u83u4ljVIT .dropdown .dropdown-menu .dropdown-item {
+      width: auto;
+      transition: all 0.25s ease-in-out;
+    }
+
+    .cid-u83u4ljVIT .dropdown .dropdown-menu .dropdown-item::after {
+      right: 0.5rem;
+    }
+
+    .cid-u83u4ljVIT .dropdown .dropdown-menu .dropdown-item .mbr-iconfont {
+      margin-right: 0.5rem;
+      vertical-align: sub;
+    }
+
+    .cid-u83u4ljVIT .dropdown .dropdown-menu .dropdown-item .mbr-iconfont:before {
+      display: inline-block;
+      transform: scale(1, 1);
+      transition: all 0.25s ease-in-out;
+    }
+
+    .cid-u83u4ljVIT .collapsed .dropdown-menu .dropdown-item:before {
+      display: none;
+    }
+
+    .cid-u83u4ljVIT .collapsed .dropdown .dropdown-menu .dropdown-item {
+      padding: 0.235em 1.5em 0.235em 1.5em !important;
+      transition: none;
+      margin: 0 !important;
+    }
+
+    .cid-u83u4ljVIT .navbar {
+      min-height: 90px;
+      transition: all 0.3s;
+      border-bottom: 1px solid transparent;
+      background: transparent !important;
+      padding: 0 !important;
+      border: none !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+    }
+
+    .cid-u83u4ljVIT .navbar.opened {
+      transition: all 0.3s;
+    }
+
+    .cid-u83u4ljVIT .navbar .dropdown-item {
+      padding: 0.5rem 1.8rem;
+    }
+
+    .cid-u83u4ljVIT .navbar .navbar-logo img {
+      min-width: 6rem;
+      object-fit: cover;
+    }
+
+    .cid-u83u4ljVIT .navbar .navbar-collapse {
+      z-index: 1;
+      justify-content: flex-end;
+    }
+
+    .cid-u83u4ljVIT .navbar.collapsed {
+      justify-content: center;
+    }
+
+    .cid-u83u4ljVIT .navbar.collapsed .nav-item .nav-link::before {
+      display: none;
+    }
+
+    .cid-u83u4ljVIT .navbar.collapsed.opened .dropdown-menu {
+      top: 0;
+    }
+
+    @media (min-width: 992px) {
+      .cid-u83u4ljVIT .navbar.collapsed.opened:not(.navbar-short) .navbar-collapse {
+        max-height: calc(98.5vh - 3rem);
+      }
+    }
+
+    .cid-u83u4ljVIT .navbar.collapsed .dropdown-menu .dropdown-submenu {
+      left: 0 !important;
+    }
+
+    .cid-u83u4ljVIT .navbar.collapsed .dropdown-menu .dropdown-item:after {
+      right: auto;
+    }
+
+    .cid-u83u4ljVIT .navbar.collapsed .dropdown-menu .dropdown-toggle[data-toggle="dropdown-submenu"]:after {
+      margin-left: 0.5rem;
+      margin-top: 0.2rem;
+      border-top: 0.35em solid;
+      border-right: 0.35em solid transparent;
+      border-left: 0.35em solid transparent;
+      border-bottom: 0;
+      top: 41%;
+    }
+
+    .cid-u83u4ljVIT .navbar.collapsed ul.navbar-nav li {
+      margin: auto;
+    }
+
+    .cid-u83u4ljVIT .navbar.collapsed .dropdown-menu .dropdown-item {
+      padding: 0.25rem 1.5rem;
+      text-align: center;
+    }
+
+    .cid-u83u4ljVIT .navbar.collapsed .icons-menu {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    @media (max-width: 767px) {
+      .cid-u83u4ljVIT .navbar {
+        min-height: 72px;
+      }
+
+      .cid-u83u4ljVIT .navbar .navbar-logo img {
+        height: 2.5rem !important;
+        min-width: 2.5rem !important;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .cid-u83u4ljVIT .navbar .nav-item .nav-link::before {
+        display: none;
+      }
+
+      .cid-u83u4ljVIT .navbar.opened .dropdown-menu {
+        top: 0;
+      }
+
+      .cid-u83u4ljVIT .navbar .dropdown-menu .dropdown-submenu {
+        left: 0 !important;
+      }
+
+      .cid-u83u4ljVIT .navbar .dropdown-menu .dropdown-item:after {
+        right: auto;
+      }
+
+      .cid-u83u4ljVIT .navbar .dropdown-menu .dropdown-toggle[data-toggle="dropdown-submenu"]:after {
+        margin-left: 0.5rem;
+        margin-top: 0.2rem;
+        border-top: 0.35em solid;
+        border-right: 0.35em solid transparent;
+        border-left: 0.35em solid transparent;
+        border-bottom: 0;
+        top: 40%;
+      }
+
+      .cid-u83u4ljVIT .navbar .dropdown-menu .dropdown-item {
+        padding: 0.25rem 1.5rem !important;
+        text-align: center;
+      }
+
+      .cid-u83u4ljVIT .navbar .navbar-brand {
+        flex-shrink: initial;
+        flex-basis: auto;
+        word-break: break-word;
+        padding-right: 10px;
+      }
+
+      .cid-u83u4ljVIT .navbar .navbar-toggler {
+        flex-basis: auto;
+      }
+
+      .cid-u83u4ljVIT .navbar .icons-menu {
+        padding-left: 0;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+    }
+
+    .cid-u83u4ljVIT .navbar.navbar-short .navbar-logo img {
+      height: 2rem;
+    }
+
+    .cid-u83u4ljVIT .dropdown-item.active,
+    .cid-u83u4ljVIT .dropdown-item:active {
+      background-color: transparent;
+    }
+
+    .cid-u83u4ljVIT .navbar-expand-lg .navbar-nav .nav-link {
+      padding: 0;
+    }
+
+    .cid-u83u4ljVIT .nav-dropdown .link.dropdown-toggle {
+      margin-right: 1.667em;
+    }
+
+    .cid-u83u4ljVIT .nav-dropdown .link.dropdown-toggle[aria-expanded="true"] {
+      margin-right: 0;
+      padding: 0.667em 1.667em;
+    }
+
+    .cid-u83u4ljVIT .navbar.navbar-expand-lg .dropdown .dropdown-menu {
+      background: #ffffff;
+    }
+
+    .cid-u83u4ljVIT .navbar.navbar-expand-lg .dropdown .dropdown-menu .dropdown-submenu {
+      margin: 0;
+      left: 105%;
+      transform: none;
+      top: -12px;
+    }
+
+    .cid-u83u4ljVIT .navbar .dropdown.open>.dropdown-menu {
+      display: flex;
+    }
+
+    .cid-u83u4ljVIT ul.navbar-nav {
+      flex-wrap: wrap;
+    }
+
+    .cid-u83u4ljVIT .navbar-buttons {
+      text-align: center;
+      min-width: 140px;
+    }
+
+    @media (max-width: 992px) {
+      .cid-u83u4ljVIT .navbar-buttons {
+        text-align: left;
+      }
+    }
+
+    .cid-u83u4ljVIT button.navbar-toggler {
+      outline: none;
+      width: 31px;
+      height: 20px;
+      cursor: pointer;
+      transition: all 0.2s;
+      position: relative;
+      align-self: center;
+    }
+
+    .cid-u83u4ljVIT button.navbar-toggler .hamburger span {
+      position: absolute;
+      right: 0;
+      width: 30px;
+      height: 2px;
+      border-right: 5px;
+      background-color: #000000;
+    }
+
+    .cid-u83u4ljVIT button.navbar-toggler .hamburger span:nth-child(1) {
+      top: 0;
+      transition: all 0.2s;
+    }
+
+    .cid-u83u4ljVIT button.navbar-toggler .hamburger span:nth-child(2) {
+      top: 8px;
+      transition: all 0.15s;
+    }
+
+    .cid-u83u4ljVIT button.navbar-toggler .hamburger span:nth-child(3) {
+      top: 8px;
+      transition: all 0.15s;
+    }
+
+    .cid-u83u4ljVIT button.navbar-toggler .hamburger span:nth-child(4) {
+      top: 16px;
+      transition: all 0.2s;
+    }
+
+    .cid-u83u4ljVIT nav.opened .hamburger span:nth-child(1) {
+      top: 8px;
+      width: 0;
+      opacity: 0;
+      right: 50%;
+      transition: all 0.2s;
+    }
+
+    .cid-u83u4ljVIT nav.opened .hamburger span:nth-child(2) {
+      transform: rotate(45deg);
+      transition: all 0.25s;
+    }
+
+    .cid-u83u4ljVIT nav.opened .hamburger span:nth-child(3) {
+      transform: rotate(-45deg);
+      transition: all 0.25s;
+    }
+
+    .cid-u83u4ljVIT nav.opened .hamburger span:nth-child(4) {
+      top: 8px;
+      width: 0;
+      opacity: 0;
+      right: 50%;
+      transition: all 0.2s;
+    }
+
+    .cid-u83u4ljVIT .navbar-dropdown {
+      padding: 0 1rem;
+    }
+
+    .cid-u83u4ljVIT a.nav-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cid-u83u4ljVIT .icons-menu {
+      flex-wrap: nowrap;
+      display: flex;
+      justify-content: center;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.3rem;
+      text-align: center;
+    }
+
+    @media (max-width: 992px) {
+      .cid-u83u4ljVIT .icons-menu {
+        justify-content: flex-start;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    @media screen and (-ms-high-contrast: active),
+    (-ms-high-contrast: none) {
+      .cid-u83u4ljVIT .navbar {
+        height: 70px;
+      }
+
+      .cid-u83u4ljVIT .navbar.opened {
+        height: auto;
+      }
+
+      .cid-u83u4ljVIT .nav-item .nav-link:hover::before {
+        width: 175%;
+        max-width: calc(100% + 2rem);
+        left: -1rem;
+      }
+    }
+
+    .cid-u83u4ljVIT .navbar .dropdown>.dropdown-menu {
+      display: none;
+      width: max-content;
+      max-width: 500px !important;
+      transform: translateX(-50%);
+      top: calc(100% + 20px);
+      left: 50%;
+    }
+
+    .cid-u83u4ljVIT .navbar .dropdown>.dropdown-menu .dropdown-item {
+      line-height: 1 !important;
+    }
+
+    .cid-u83u4ljVIT .navbar .dropdown>.dropdown-menu .dropdown .dropdown-item {
+      align-items: center;
+      display: flex;
+      height: max-content !important;
+      min-height: max-content !important;
+    }
+
+    .cid-u83u4ljVIT .navbar .dropdown>.dropdown-menu .dropdown .dropdown-item::after {
+      display: inline-block;
+      position: static;
+      margin-left: 0.5rem;
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 0;
+      transition: 0.3s all;
+      transform: rotate(-90deg);
+    }
+
+    .cid-u83u4ljVIT .navbar .dropdown>.dropdown-menu .dropdown.open .dropdown-item::after {
+      transform: rotate(0deg);
+    }
+
+    .cid-u83u4ljVIT .mbr-section-btn {
+      margin: -0.6rem -0.6rem;
+    }
+
+    .cid-u83u4ljVIT .navbar-toggler {
+      margin-left: 12px;
+      margin-right: 8px;
+      order: 1000;
+    }
+
+    @media (max-width: 991px) {
+      .cid-u83u4ljVIT .navbar-brand {
+        margin-right: auto;
+      }
+
+      .cid-u83u4ljVIT .navbar-collapse {
+        z-index: -1 !important;
+        position: absolute;
+        top: 110%;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 1.5rem;
+        background: #ffffff;
+        opacity: 1;
+        border-color: rgba(255, 255, 255, 0.8) !important;
+        background: rgba(255, 255, 255, 0.8) !important;
+        backdrop-filter: blur(8px);
+      }
+
+      .cid-u83u4ljVIT .navbar-nav .nav-item .nav-link::after {
+        margin-left: 10px;
+      }
+
+      .cid-u83u4ljVIT .navbar-nav .dropdown-item:hover {
+        background-color: rgba(27, 31, 10, 0.06);
+      }
+
+      .cid-u83u4ljVIT .navbar .dropdown>.dropdown-menu {
+        max-width: 100% !important;
+        transform: translateX(0);
+        top: 10px;
+        left: 0;
+        padding: 8px !important;
+        border-radius: 1rem;
+        background-color: rgba(27, 31, 10, 0.04) !important;
+      }
+
+      .cid-u83u4ljVIT .navbar .dropdown>.dropdown-menu .dropdown-item {
+        padding: 8px !important;
+        line-height: 1 !important;
+        margin-bottom: 4px !important;
+      }
+
+      .cid-u83u4ljVIT .navbar .dropdown>.dropdown-menu .dropdown .dropdown-item {
+        align-items: center;
+        display: flex;
+        height: max-content !important;
+        min-height: max-content !important;
+      }
+
+      .cid-u83u4ljVIT .navbar .dropdown>.dropdown-menu .dropdown .dropdown-item::after {
+        display: inline-block;
+        position: static;
+        margin-left: 0.5rem;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        transition: 0.3s all;
+        transform: rotate(0deg);
+      }
+
+      .cid-u83u4ljVIT .navbar .dropdown>.dropdown-menu .dropdown.open .dropdown-item::after {
+        transform: rotate(180deg);
+      }
+
+      .cid-u83u4ljVIT .navbar .dropdown>.dropdown-menu .dropdown-submenu {
+        position: static;
+        width: 100%;
+        max-width: 100% !important;
+        transform: translateX(0) !important;
+        top: 0;
+        left: 0;
+        padding: 8px !important;
+        border-radius: 1rem;
+        background-color: rgba(27, 31, 10, 0.04) !important;
+      }
+
+      .cid-u83u4ljVIT .navbar .dropdown.open>.dropdown-menu {
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .cid-u83u4ljVIT .navbar-collapse {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="menu menu2 cid-u83u4ljVIT" once="menu" id="menu-5-u83u4ljVIT">
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+      <div class="container">
+        <div class="navbar-brand">
+          <span class="navbar-logo">
+            <a href="https://mobiri.se">
+              <img src="assets/images/photo-1478432780021-b8d273730d8c.jpeg" style="height: 4.3rem;">
+            </a>
+          </span>
+          <span class="navbar-caption-wrap">
+            <a class="navbar-caption text-black display-4" href="">MentalBoost</a>
+          </span>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+          data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+            <li class="nav-item">
+              <a class="nav-link link text-black display-4" href="http://127.0.0.1:5003/chatbot">Chatbot</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link text-black display-4" href="#" onclick="openSurvey()">Form</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link link text-black display-4" href="https://www.samhsa.gov/data/data-we-collect/n-mhss-national-mental-health-services-survey">Report</a>
+          </li>
+          
+          <script>
+            function openSurvey() {
+                // Open the survey form in a new window
+                window.open("http://127.0.0.1:5001", "_blank");
+            }
+        </script>
+          
+        
+          </ul>
+          <div id="style-toggle", style="text-align: center;">
+            
+              <div class="navbar-buttons mbr-section-btn">
+                <a class="btn btn-primary display-4" href="#video-6-u83u4ljtir">Get Started</a>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <style>
+    .cid-u83u4ljMEC {
+      display: flex;
+    }
+
+    @media (min-width: 768px) {
+      .cid-u83u4ljMEC {
+        align-items: flex-end;
+      }
+
+      .cid-u83u4ljMEC .row {
+        justify-content: flex-start;
+      }
+
+      .cid-u83u4ljMEC .content-wrap {
+        padding: 1rem 3rem;
+      }
+    }
+
+    @media (max-width: 991px) and (min-width: 768px) {
+      .cid-u83u4ljMEC .content-wrap {
+        min-width: 50%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .cid-u83u4ljMEC {
+        -webkit-align-items: center;
+        align-items: flex-end;
+      }
+
+      .cid-u83u4ljMEC .mbr-row {
+        -webkit-justify-content: center;
+        justify-content: center;
+      }
+
+      .cid-u83u4ljMEC .content-wrap {
+        width: 100%;
+      }
+    }
+
+    .cid-u83u4ljMEC .mbr-fallback-image.disabled {
+      display: none;
+    }
+
+    .cid-u83u4ljMEC .mbr-fallback-image {
+      display: block;
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background: #000000;
+    }
+
+    .cid-u83u4ljMEC .mbr-section-title,
+    .cid-u83u4ljMEC .mbr-section-subtitle {
+      text-align: left;
+      color: var(--dominant-color, #ffc091);
+    }
+
+    .cid-u83u4ljMEC .mbr-text,
+    .cid-u83u4ljMEC .mbr-section-btn {
+      text-align: left;
+    }
+  </style>
+  <section class="header18 cid-u83u4ljMEC mbr-fullscreen"
+    data-bg-video="https://www.youtube.com/embed/kWqXMUUcZqc?autoplay&#x3D;1&amp;loop&#x3D;1&amp;playlist&#x3D;kWqXMUUcZqc&amp;t&#x3D;20&amp;mute&#x3D;1&amp;playsinline&#x3D;1&amp;controls&#x3D;0&amp;showinfo&#x3D;0&amp;autohide&#x3D;1&amp;allowfullscreen&#x3D;true&amp;mode&#x3D;transparent"
+    id="hero-15-u83u4ljMEC">
+    <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="content-wrap col-12 col-md-8">
+          <h1
+            class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1 animate__animated animate__delay-1s animate__fadeInUp">
+            <strong>Boost Mind</strong>
+          </h1>
+          <p
+            class="mbr-fonts-style mbr-text mbr-white mb-4 display-7 animate__animated animate__delay-1s animate__fadeInUp">
+            Empowering Minds, One Click at a Time. Unleash Your Mental Strength Today!</p>
+          <div class="mbr-section-btn">
+            <a class="btn btn-white-outline display-7 animate__animated animate__delay-1s animate__fadeInUp"
+              href="#faq-1-u83u4lkc5o">Explore More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .cid-u83u4ljtir {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      background-color: #ffffff;
+    }
+
+    .cid-u83u4ljtir .mbr-fallback-image.disabled {
+      display: none;
+    }
+
+    .cid-u83u4ljtir .mbr-fallback-image {
+      display: block;
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
+
+    .cid-u83u4ljtir .video-wrapper iframe {
+      width: 100%;
+    }
+
+    .cid-u83u4ljtir .mbr-section-title,
+    .cid-u83u4ljtir .mbr-section-subtitle,
+    .cid-u83u4ljtir .mbr-text {
+      text-align: center;
+    }
+  </style>
+ <section class="video04 cid-u83u4ljtir" id="video-6-u83u4ljtir">
+  <div class="container">
+    <div class="mbr-section-head mb-5">
+      <h4 class="mbr-section-title mbr-fonts-style mb-0 mt-0 display-2">
+        <strong>Mindset Revolution Begins Here</strong>
+      </h4>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 video-block">
+        <div class="video-wrapper">
+          <iframe class="mbr-embedded-video"
+            src="https://www.youtube.com/embed/9HaU8NjH7bI?autoplay&#x3D;1&amp;loop&#x3D;1&amp;playlist&#x3D;9HaU8NjH7bI&amp;t&#x3D;20&amp;mute&#x3D;1&amp;playsinline&#x3D;1&amp;controls&#x3D;0&amp;showinfo&#x3D;0&amp;autohide&#x3D;1&amp;allowfullscreen&#x3D;true&amp;mode&#x3D;transparent"
+            width="1280" height="720" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <style>
+    .cid-u83u4lkgBE {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      background-color: transparent;
+    }
+
+    .cid-u83u4lkgBE .mbr-fallback-image.disabled {
+      display: none;
+    }
+
+    .cid-u83u4lkgBE .mbr-fallback-image {
+      display: block;
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
+
+    @media (max-width: 767px) {
+      .cid-u83u4lkgBE .card-content-text {
+        padding: 1.5rem 1.5rem 0 1.5rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .cid-u83u4lkgBE .card-content-text {
+        padding: 2.25rem 2.25rem 0 2.25rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .cid-u83u4lkgBE .card-content-text {
+        padding: 4rem 4rem 1rem 4rem;
+      }
+    }
+
+    .cid-u83u4lkgBE .card-wrapper {
+      background: #ffffff;
+    }
+
+    .cid-u83u4lkgBE .mbr-text,
+    .cid-u83u4lkgBE .mbr-section-btn {
+      color: #000000;
+      text-align: left;
+    }
+
+    .cid-u83u4lkgBE .card-title,
+    .cid-u83u4lkgBE .card-box {
+      text-align: left;
+      color: #000000;
+    }
+  </style>
+  <section class="article9 cid-u83u4lkgBE" id="about-us-9-u83u4lkgBE">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="card col-md-12 col-lg-10">
+          <div class="card-wrapper">
+            <div class="card-content-text">
+              <h3 class="card-title mbr-fonts-style mbr-white mt-3 mb-4 display-2">
+                <strong>Meet the Mavericks</strong>
+              </h3>
+              <div class="row card-box align-left">
+                <div class="item features-without-image col-12">
+                  <div class="item-wrapper">
+                    <p class="mbr-text mbr-fonts-style display-7">We&#x27;re a dynamic duo of student visionaries on a
+                      mission to revolutionize mental health support.</p>
+                  </div>
+                </div>
+                <div class="item features-without-image col-12">
+                  <div class="item-wrapper">
+                    <p class="mbr-text mbr-fonts-style display-7">Our website offers a cutting-edge chatbot for engaging
+                      interactions, a user-friendly form for personalized assistance, and insightful reports to boost
+                      your mental well-being.</p>
+                  </div>
+                </div>
+                <div class="item features-without-image col-12">
+                  <div class="item-wrapper">
+                    <p class="mbr-text mbr-fonts-style display-7">Join us in this journey to transform the way we
+                      approach mental health. Let&#x27;s thrive together!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image-wrapper d-flex justify-content-center mt-3">
+              <img src="assets/images/photo-1518770660439-4636190af475.jpeg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .cid-u83u4lkY3a {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      background-color: #ffffff;
+    }
+
+    .cid-u83u4lkY3a .mbr-text {
+      color: #000000;
+    }
+
+    .cid-u83u4lkY3a .mbr-section-subtitle {
+      color: #000000;
+    }
+
+    .cid-u83u4lkY3a .mbr-section-title {
+      color: #000000;
+    }
+
+    .cid-u83u4lkY3a .img-wrapper img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50% !important;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      .cid-u83u4lkY3a .img-wrapper img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .cid-u83u4lkY3a .img-wrapper img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    .cid-u83u4lkY3a .img-wrapper {
+      display: flex;
+    }
+
+    .cid-u83u4lkY3a .card-text {
+      text-align: center;
+    }
+
+    .cid-u83u4lkY3a .card-title,
+    .cid-u83u4lkY3a .img-wrapper {
+      text-align: center;
+    }
+  </style>
+  <section class="people07 cid-u83u4lkY3a" id="testimonials-8-u83u4lkY3a">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-8">
+          <p class="card-text mbr-fonts-style display-5">
+            &quot;MentalBoost changed my life! The chatbot is a game-changer.&quot;
+          </p>
+          <div class="img-wrapper mt-3 justify-content-center">
+            <img src="assets/images/photo-1592669546196-bb70d4f16dd7.jpeg" data-slide-to="0" data-bs-slide-to="0">
+          </div>
+          <p class="card-title mbr-fonts-style mt-3 display-7">
+            <strong>Samantha</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .cid-u83u4lkV6n {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      background-color: #ffffff;
+    }
+
+    .cid-u83u4lkV6n .item:focus,
+    .cid-u83u4lkV6n span:focus {
+      outline: none;
+    }
+
+    .cid-u83u4lkV6n .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+      overflow: hidden;
+    }
+
+    .cid-u83u4lkV6n .content-head {
+      max-width: 800px;
+    }
+
+    .cid-u83u4lkV6n .item {
+      color: #232323;
+      min-height: 90px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .cid-u83u4lkV6n .item {
+        min-height: 45px;
+      }
+    }
+  </style>
+  <section class="gallery10 cid-u83u4lkV6n" id="features-69-u83u4lkV6n">
+    <div class="container-fluid">
+      <div class="loop-container">
+        <div class="item display-1" data-linewords="
+          Interactive Chatbot for Instant Support *
+          Engaging Form for Personalized Assessment *" data-direction="-1" data-speed="0.05">
+        </div>
+        <div class="item display-1" data-linewords="
+          Interactive Chatbot for Instant Support *
+          Engaging Form for Personalized Assessment *" data-direction="-1" data-speed="0.05">
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .cid-u83u4lkc5o {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      background-color: transparent;
+    }
+
+    .cid-u83u4lkc5o .mbr-iconfont {
+      font-size: 1.2rem !important;
+      font-family: 'Moririse2' !important;
+      color: white;
+      transition: all 0.3s;
+      transform: rotate(180deg);
+    }
+
+    .cid-u83u4lkc5o .panel-group {
+      border: none;
+    }
+
+    .cid-u83u4lkc5o .card-header {
+      padding: 1.2rem 0.5rem;
+    }
+
+    @media (max-width: 767px) {
+      .cid-u83u4lkc5o .card-header {
+        padding: 1rem 0rem;
+      }
+    }
+
+    .cid-u83u4lkc5o .panel-body {
+      padding: 0 0.5rem;
+      padding-bottom: 1rem;
+    }
+
+    @media (max-width: 767px) {
+      .cid-u83u4lkc5o .panel-body {
+        padding: 0rem;
+        padding-bottom: 1rem;
+      }
+    }
+
+    .cid-u83u4lkc5o .img-col {
+      padding: 0;
+    }
+
+    .cid-u83u4lkc5o .img-item {
+      height: 100%;
+    }
+
+    .cid-u83u4lkc5o img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cid-u83u4lkc5o .collapsed span {
+      transform: rotate(0deg);
+    }
+
+    .cid-u83u4lkc5o .panel-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cid-u83u4lkc5o p {
+      margin-bottom: 0.3rem;
+    }
+
+    .cid-u83u4lkc5o .card .card-header {
+      background-color: transparent;
+      margin-bottom: 0;
+      border: 0;
+      border-radius: 2rem;
+    }
+
+    .cid-u83u4lkc5o .card {
+      background: #ffffff;
+      padding: 1rem 2rem;
+      border-radius: 2rem;
+    }
+
+    @media (max-width: 767px) {
+      .cid-u83u4lkc5o .card {
+        padding: 1.5rem;
+      }
+    }
+
+    .cid-u83u4lkc5o .panel-text {
+      color: #000000;
+    }
+
+    .cid-u83u4lkc5o .mbr-section-title {
+      text-align: center;
+      color: #000000;
+    }
+
+    .cid-u83u4lkc5o .mbr-section-subtitle {
+      color: #000000;
+      text-align: center;
+    }
+
+    .cid-u83u4lkc5o .panel-title-edit,
+    .cid-u83u4lkc5o .mbr-iconfont {
+      color: #000000;
+    }
+  </style>
+  <section class="list1 cid-u83u4lkc5o" id="faq-1-u83u4lkc5o">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-12 col-lg-10 m-auto">
+          <div class="content">
+            <div class="mbr-section-head align-left mb-5">
+              <h3 class="mbr-section-title mb-2 mbr-fonts-style display-2">
+                <strong>Curious Minds Want to Know</strong>
+              </h3>
+            </div>
+            <div id="bootstrap-accordion_0" class="panel-group accordionStyles accordion" role="tablist"
+              aria-multiselectable="true">
+              <div class="card mb-3">
+                <div class="card-header" role="tab" id="headingOne">
+                  <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse"
+                    data-core="" href="#collapse1_0" aria-expanded="false" aria-controls="collapse1">
+                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+                      How does the chatbot work?
+                    </h6>
+                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+                  </a>
+                </div>
+                <div id="collapse1_0" class="panel-collapse noScroll collapse" role="tabpanel"
+                  aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+                  <div class="panel-body">
+                    <p class="mbr-fonts-style panel-text display-7">
+                      Our chatbot uses advanced AI to provide real-time support and guidance tailored to your needs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3">
+                <div class="card-header" role="tab" id="headingOne">
+                  <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse"
+                    data-core="" href="#collapse2_0" aria-expanded="false" aria-controls="collapse2">
+                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+                      What&#x27;s the purpose of the form?
+                    </h6>
+                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+                  </a>
+                </div>
+                <div id="collapse2_0" class="panel-collapse noScroll collapse" role="tabpanel"
+                  aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+                  <div class="panel-body">
+                    <p class="mbr-fonts-style panel-text display-7">
+                      The form helps us understand your mental health status to offer personalized recommendations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3">
+                <div class="card-header" role="tab" id="headingOne">
+                  <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse"
+                    data-core="" href="#collapse3_0" aria-expanded="false" aria-controls="collapse3">
+                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+                      Is the report confidential?
+                    </h6>
+                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+                  </a>
+                </div>
+                <div id="collapse3_0" class="panel-collapse noScroll collapse" role="tabpanel"
+                  aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+                  <div class="panel-body">
+                    <p class="mbr-fonts-style panel-text display-7">
+                      Absolutely! Your mental health data is securely handled and kept confidential at all times.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3">
+                <div class="card-header" role="tab" id="headingOne">
+                  <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse"
+                    data-core="" href="#collapse4_0" aria-expanded="false" aria-controls="collapse4">
+                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+                      Can I trust the chatbot&#x27;s advice?
+                    </h6>
+                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+                  </a>
+                </div>
+                <div id="collapse4_0" class="panel-collapse noScroll collapse" role="tabpanel"
+                  aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+                  <div class="panel-body">
+                    <p class="mbr-fonts-style panel-text display-7">
+                      Our chatbot is designed by mental health experts to provide reliable and helpful suggestions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3">
+                <div class="card-header" role="tab" id="headingOne">
+                  <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse"
+                    data-core="" href="#collapse5_0" aria-expanded="false" aria-controls="collapse5">
+                    <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">
+                      How long does the assessment take?
+                    </h6>
+                    <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
+                  </a>
+                </div>
+                <div id="collapse5_0" class="panel-collapse noScroll collapse" role="tabpanel"
+                  aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_0">
+                  <div class="panel-body">
+                    <p class="mbr-fonts-style panel-text display-7">
+                      The assessment is quick and efficient, ensuring you get the support you need without delay.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .cid-u83u4lkh7h {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      background-color: transparent;
+    }
+
+    .cid-u83u4lkh7h .mbr-fallback-image.disabled {
+      display: none;
+    }
+
+    .cid-u83u4lkh7h .mbr-fallback-image {
+      display: block;
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
+
+    .cid-u83u4lkh7h .card-wrapper {
+      background: var(--dominant-color, #393193);
+    }
+
+    @media (max-width: 767px) {
+      .cid-u83u4lkh7h .card-wrapper {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      .cid-u83u4lkh7h .card-wrapper {
+        padding: 2.25rem;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .cid-u83u4lkh7h .card-wrapper {
+        padding: 4rem;
+      }
+    }
+
+    .cid-u83u4lkh7h .mbr-text,
+    .cid-u83u4lkh7h .mbr-section-btn {
+      color: var(--dominant-text, #ffd7ef);
+    }
+
+    .cid-u83u4lkh7h .card-title,
+    .cid-u83u4lkh7h .card-box {
+      text-align: center;
+      color: var(--dominant-text, #ffd7ef);
+    }
+  </style>
+  <section class="article13 cid-u83u4lkh7h" id="call-to-action-5-u83u4lkh7h">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="card col-md-12 col-lg-10">
+          <div class="card-wrapper">
+            <div class="card-box align-center">
+              <h4 class="card-title mbr-fonts-style display-2">
+                <strong>Unlock Your Mental Wellness Potential Today</strong>
+              </h4>
+              <p class="mbr-text mbr-fonts-style mt-4 display-7">
+                Take the first step towards a healthier mind by engaging with our innovative tools and resources.
+                Let&#x27;s embark on this journey together!
+              </p>
+              <div class="mbr-section-btn mt-4">
+                <a class="btn btn-primary display-4" href="#events-1-u83u4llaiP">
+                  Get Started
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .cid-u83u4llVeZ {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      background-color: #ffffff;
+    }
+
+    .cid-u83u4llVeZ .mbr-fallback-image.disabled {
+      display: none;
+    }
+
+    .cid-u83u4llVeZ .item-wrapper {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .cid-u83u4llVeZ .mbr-fallback-image {
+      display: block;
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
+
+    .cid-u83u4llVeZ .mbr-iconfont {
+      display: inline-flex;
+      font-size: 2rem;
+      color: var(--primary-color, #d70081);
+      width: 80px;
+      justify-content: center;
+      align-items: center;
+      background: #ffd7ef;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    .cid-u83u4llVeZ .card-title,
+    .cid-u83u4llVeZ .iconfont-wrapper {
+      color: var(--primary-color, #d70081);
+      text-align: center;
+    }
+
+    .cid-u83u4llVeZ .card-text {
+      color: #000000;
+      text-align: center;
+    }
+
+    .cid-u83u4llVeZ .content-head {
+      max-width: 800px;
+    }
+
+    .cid-u83u4llVeZ .mbr-section-title {
+      color: #000000;
+    }
+  </style>
+  <section class="features10 cid-u83u4llVeZ" id="metrics-2-u83u4llVeZ">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="item features-without-image col-12 col-md-6 col-lg-4">
+          <div class="item-wrapper">
+            <div class="card-box align-left">
+              <h5 class="card-title mbr-fonts-style display-1">
+                <strong>87%</strong>
+              </h5>
+              <p class="card-text mbr-fonts-style mb-3 display-7">
+                Positive Progress
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item features-without-image col-12 col-md-6 col-lg-4">
+          <div class="item-wrapper">
+            <div class="card-box align-left">
+              <h5 class="card-title mbr-fonts-style display-1">
+                <strong>9/10</strong>
+              </h5>
+              <p class="card-text mbr-fonts-style mb-3 display-7">
+                Users Recommend
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item features-without-image col-12 col-md-6 col-lg-4">
+          <div class="item-wrapper">
+            <div class="card-box align-left">
+              <h5 class="card-title mbr-fonts-style display-1">
+                <strong>98%</strong>
+              </h5>
+              <p class="card-text mbr-fonts-style mb-3 display-7">
+                Confidentiality Guaranteed
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .cid-u83u4ll7bx {
+      padding-top: 5rem;
+      padding-bottom: 3rem;
+      background-color: #ffffff;
+    }
+
+    .cid-u83u4ll7bx .item-subtitle {
+      line-height: 1.2;
+      color: #000000;
+    }
+
+    .cid-u83u4ll7bx img,
+    .cid-u83u4ll7bx .item-img {
+      width: 100%;
+      height: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .cid-u83u4ll7bx .item:focus,
+    .cid-u83u4ll7bx span:focus {
+      outline: none;
+    }
+
+    .cid-u83u4ll7bx .item {
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 767px) {
+      .cid-u83u4ll7bx .item {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .cid-u83u4ll7bx .item-wrapper {
+      position: relative;
+      border-radius: 4px;
+      height: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+    }
+
+    .cid-u83u4ll7bx .mbr-section-title {
+      color: #000000;
+    }
+
+    .cid-u83u4ll7bx .mbr-text,
+    .cid-u83u4ll7bx .mbr-section-btn {
+      color: #000000;
+    }
+
+    .cid-u83u4ll7bx .item-title {
+      color: #000000;
+    }
+
+    .cid-u83u4ll7bx .content-head {
+      max-width: 800px;
+    }
+  </style>
+  <section class="blog-2 cid-u83u4ll7bx" id="blog-2-u83u4ll7bx">
+    <div class="container-fluid">
+      <div class="row justify-content-center mb-5">
+        <div class="col-12 content-head">
+          <div class="mbr-section-head">
+            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+              <strong>Explore Mental Health Insights</strong>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="item features-image col-12 col-md-6 col-lg-3 active">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="assets/images/photo-1488229297570-58520851e868.jpeg">
+            </div>
+            <div class="item-content align-left">
+              <h5 class="item-title mbr-fonts-style mt-0 mb-3 display-7">
+                Wellness
+              </h5>
+              <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+                <strong>Boost Your Mood Instantly</strong>
+              </h6>
+
+              <div class="mbr-section-btn item-footer">
+                <a href="https://www.ucl.ac.uk/students/news/2020/apr/15-small-things-you-can-do-every-day-improve-your-mood" class="btn item-btn btn-primary display-7">
+                  Read
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="assets/images/photo-1671726203449-34e89df45211.jpeg" data-slide-to="1"
+                data-bs-slide-to="1">
+            </div>
+            <div class="item-content align-left">
+              <h5 class="item-title mbr-fonts-style mb-3 mt-0 display-7">
+                Mindfulness
+              </h5>
+              <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+                <strong>Mindful Moments for Inner Peace</strong>
+              </h6>
+              <div class="mbr-section-btn item-footer">
+                <a href="https://positivepsychology.com/mindfulness-exercises-techniques-activities/" class="btn item-btn btn-primary display-7">
+                  Read
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="assets/images/photo-1605810230434-7631ac76ec81.jpeg" data-slide-to="2"
+                data-bs-slide-to="2">
+            </div>
+            <div class="item-content align-left">
+              <h5 class="item-title mbr-fonts-style mb-3 mt-0 display-7">
+                Self-Care
+              </h5>
+              <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
+                <strong>Self-Love Practices for a Brighter Day</strong>
+              </h6>
+              <div class="mbr-section-btn item-footer">
+                <a href="https://www.omjoos.com/news-and-blog/2020/02/13/self-love-10-amazing-tips-for-learning-to-love-yourself-more-on-valentines-day" class="btn item-btn btn-primary display-7">
+                  Read
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="assets/images/photo-1671726203454-5d7a5370a9f4.jpeg" data-slide-to="3"
+                data-bs-slide-to="4">
+            </div>
+            <div class="item-content align-left">
+              <h5 class="item-title mbr-fonts-style mb-3 mt-0 display-7">
+                Therapy
+              </h5>
+              <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
+                <strong>
+                  Therapeutic Techniques for Stress Relief
+                </strong>
+              </h6>
+
+              <div class="mbr-section-btn item-footer">
+                <a href="https://www.verywellmind.com/tips-to-reduce-stress-3145195" class="btn item-btn btn-primary display-7">
+                  Read
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .cid-u83u4llaiP {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      background-color: #ffffff;
+    }
+
+    .cid-u83u4llaiP .item-subtitle {
+      line-height: 1.2;
+      color: #000000;
+    }
+
+    .cid-u83u4llaiP img,
+    .cid-u83u4llaiP .item-img {
+      width: 100%;
+      height: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .cid-u83u4llaiP .item:focus,
+    .cid-u83u4llaiP span:focus {
+      outline: none;
+    }
+
+    .cid-u83u4llaiP .item {
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 767px) {
+      .cid-u83u4llaiP .item {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .cid-u83u4llaiP .item-wrapper {
+      position: relative;
+      border-radius: 4px;
+      height: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+    }
+
+    .cid-u83u4llaiP .mbr-section-title {
+      color: #232323;
+    }
+
+    .cid-u83u4llaiP .mbr-text,
+    .cid-u83u4llaiP .mbr-section-btn {
+      color: #232323;
+    }
+
+    .cid-u83u4llaiP .item-title {
+      color: #232323;
+    }
+
+    .cid-u83u4llaiP .content-head {
+      max-width: 800px;
+    }
+  </style>
+  <section class="features03 cid-u83u4llaiP" id="events-1-u83u4llaiP">
+    <div class="container-fluid">
+      <div class="row justify-content-center mb-5">
+        <div class="col-12 content-head">
+          <div class="mbr-section-head">
+            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+              <strong>Mind Matters</strong>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="item features-image col-12 col-md-6 col-lg-3 active">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="assets/images/photo-1488590528505-98d2b5aba04b.jpeg">
+            </div>
+            <div class="item-content align-left">
+              <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+                  <strong><a class="text-black fw-bold" href="#" onclick="openForm('Depression')">Depression Analysis</a></strong>
+              </h6>
+              <p class="mbr-text mbr-fonts-style mb-3 display-7">April 1, 2024</p>
+              <p class="mbr-text mbr-fonts-style mb-3 display-7">Join our quirky chatbot for a therapeutic session filled with humor and wisdom. Let the AI guide you through the maze of your mind.</p>
+              <div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7" onclick="openForm('Depression')">Start</a></div>
+          </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="assets/images/photo-1573164713988-8665fc963095.jpeg" data-slide-to="1"
+                data-bs-slide-to="1">
+            </div>
+            <div class="item-content align-left">
+              <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+                <strong><a class="text-black fw-bold" href="#" onclick="openForm('Anxiety')">Anxiety Analysis</a></strong>
+              </h6>
+              <p class="mbr-text mbr-fonts-style mb-3 display-7">April 5, 2024</p>
+              <p class="mbr-text mbr-fonts-style mb-3 display-7">Fill out our form and let our algorithm dissect your
+                mental health patterns. Discover insights you never knew about yourself!</p>
+              <div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7" onclick="openForm('Anxiety')">Start</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="assets/images/photo-1519389950473-47ba0277781c.jpeg" data-slide-to="2"
+                data-bs-slide-to="2">
+            </div>
+            <div class="item-content align-left">
+              <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
+                <strong><a class="text-black fw-bold" href="#" onclick="openForm('ADHD')">ADHD Analysis</a></strong>
+              </h6>
+              <p class="mbr-text mbr-fonts-style mb-3 display-7">April 10, 2024</p>
+              <p class="mbr-text mbr-fonts-style mb-3 display-7">Attention-deficit/hyperactivity disorder (ADHD) is one of the most common mental disorders affecting children.!!</p>
+              <div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7" onclick="openForm('ADHD')">Start</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="item-img mb-3">
+              <img src="assets/images/photo-1485579149621-3123dd979885.jpeg" data-slide-to="3"
+                data-bs-slide-to="3">
+            </div>
+            <div class="item-content align-left">
+              <h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
+                <strong><a class="text-black fw-bold" href="#" onclick="openForm('OCD')">OCD Analysis</a></strong>
+              </h6>
+              <p class="mbr-text mbr-fonts-style mb-3 display-7"></p>
+              <p class="mbr-text mbr-fonts-style mb-3 display-7">Obsessive compulsive disorder (OCD) affects people differently, but usually causes a particular pattern of thoughts and behaviours.</p>
+              <div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7" onclick="openForm('OCD')">Start</a>
+              </div>
+            </div>
+          </div>
+          <script>
+            function openForm(formName) {
+                // Redirect the user to the survey form page for the selected formName
+                window.location.href = `http://127.0.0.1:5002/survey2/${formName}`;
+            }
+        </script>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .cid-u83u4ll5nF {
+      overflow: hidden;
+      background-image: url("assets/images/photo-1568952433726-3896e3881c65.jpeg");
+    }
+  </style>
+  <section class="image02 cid-u83u4ll5nF mbr-fullscreen mbr-parallax-background" id="image-13-u83u4ll5nF">
+    <div class="container">
+      <div class="row"></div>
+    </div>
+  </section>
+  <style>
+    .cid-u83u4llKHG {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      background-color: #ffffff;
+    }
+
+    .cid-u83u4llKHG .item:focus,
+    .cid-u83u4llKHG span:focus {
+      outline: none;
+    }
+
+    .cid-u83u4llKHG .item {
+      cursor: pointer;
+    }
+
+    .cid-u83u4llKHG .grid-container {
+      grid-row-gap: 2rem;
+    }
+
+    @media (max-width: 767px) {
+      .cid-u83u4llKHG .grid-container {
+        grid-row-gap: 1rem;
+      }
+    }
+
+    .cid-u83u4llKHG .grid-container-1,
+    .cid-u83u4llKHG .grid-container-2,
+    .cid-u83u4llKHG .grid-container-3 {
+      gap: 0 2rem;
+    }
+
+    @media (max-width: 767px) {
+
+      .cid-u83u4llKHG .grid-container-1,
+      .cid-u83u4llKHG .grid-container-2,
+      .cid-u83u4llKHG .grid-container-3 {
+        gap: 0 1rem;
+      }
+    }
+
+    .cid-u83u4llKHG .mbr-section-title {
+      color: #000000;
+    }
+
+    .cid-u83u4llKHG .mbr-text,
+    .cid-u83u4llKHG .mbr-section-btn {
+      color: #000000;
+    }
+
+    .cid-u83u4llKHG .content-head {
+      max-width: 800px;
+    }
+
+    .cid-u83u4llKHG .container,
+    .cid-u83u4llKHG .container-fluid {
+      overflow: hidden;
+    }
+
+    .cid-u83u4llKHG .grid-container {
+      display: grid;
+      transform: translate3d(-3rem, 0, 0);
+      width: 115vw;
+      grid-column-gap: 1rem;
+    }
+
+    .cid-u83u4llKHG .grid-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cid-u83u4llKHG .grid-item img {
+      min-width: 30vw;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 767px) {
+      .cid-u83u4llKHG .grid-item img {
+        min-width: 35vw;
+      }
+    }
+
+    .cid-u83u4llKHG .grid-container-1,
+    .cid-u83u4llKHG .grid-container-2,
+    .cid-u83u4llKHG .grid-container-3 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-columns: 1fr;
+      grid-auto-flow: column;
+    }
+
+    .cid-u83u4llKHG .grid-container-1 {
+      align-items: flex-end;
+    }
+
+    .cid-u83u4llKHG .grid-container-2 {
+      align-items: flex-start;
+    }
+  </style>
+  <section class="gallery07 cid-u83u4llKHG" id="gallery-14-u83u4llKHG">
+    <div class="container-fluid gallery-wrapper">
+      <div class="grid-container">
+        <div class="grid-container-3" style="transform: translate3d(-200px, 0px, 0px);">
+          <div class="grid-item">
+            <img src="assets/images/photo-1451187580459-43490279c0fa.jpeg">
+          </div>
+          <div class="grid-item">
+            <img src="assets/images/photo-1581090700227-1e37b190418e.jpeg">
+          </div>
+          <div class="grid-item">
+            <img src="assets/images/photo-1487058792275-0ad4aaf24ca7.jpeg">
+          </div>
+          <div class="grid-item">
+            <img src="assets/images/photo-1516251193007-45ef944ab0c6.jpeg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .cid-u83u4lllIs .mbr-fallback-image.disabled {
+      display: none;
+    }
+
+    .cid-u83u4lllIs .mbr-fallback-image {
+      display: block;
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background: #000000;
+    }
+  </style>
+  <section class="header18 cid-u83u4lllIs mbr-fullscreen"
+    data-bg-video="https://www.youtube.com/embed/l73dA-A0Si4?autoplay&#x3D;1&amp;loop&#x3D;1&amp;playlist&#x3D;l73dA-A0Si4&amp;t&#x3D;20&amp;mute&#x3D;1&amp;playsinline&#x3D;1&amp;controls&#x3D;0&amp;showinfo&#x3D;0&amp;autohide&#x3D;1&amp;allowfullscreen&#x3D;true&amp;mode&#x3D;transparent"
+    id="video-5-u83u4lllIs">
+    <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
+    <div class="container-fluid">
+      <div class="row">
+      </div>
+    </div>
+  </section>
+  <style>
+    .cid-u83u4llB0O {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      background-color: #ffffff;
+    }
+
+    .cid-u83u4llB0O .mbr-fallback-image.disabled {
+      display: none;
+    }
+
+    .cid-u83u4llB0O .mbr-fallback-image {
+      display: block;
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
+
+    .cid-u83u4llB0O .bg-facebook {
+      background: #1778f2;
+      color: #ffffff;
+    }
+
+    .cid-u83u4llB0O .bg-facebook:hover {
+      background: #0b60cb;
+    }
+
+    .cid-u83u4llB0O .bg-twitter {
+      background: #1da1f2;
+      color: #ffffff;
+    }
+
+    .cid-u83u4llB0O .bg-twitter:hover {
+      background: #0c85d0;
+    }
+
+    .cid-u83u4llB0O .bg-instagram {
+      background: #f00075;
+      color: #ffffff;
+    }
+
+    .cid-u83u4llB0O .bg-instagram:hover {
+      background: #bd005c;
+    }
+
+    .cid-u83u4llB0O .bg-tiktok {
+      background: #000000;
+      color: #ffffff;
+    }
+
+    .cid-u83u4llB0O .bg-tiktok:hover {
+      background: #000000;
+    }
+
+    .cid-u83u4llB0O .iconfont-wrapper {
+      display: inline-block;
+      font-size: 32px;
+      border-radius: 50%;
+      width: 72px;
+      height: 72px;
+      line-height: 72px;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .cid-u83u4llB0O [class^="socicon-"]:before,
+    .cid-u83u4llB0O [class*=" socicon-"]:before {
+      line-height: 55px;
+      padding: .6rem;
+    }
+  </style>
+  <section class="social4 cid-u83u4llB0O" id="follow-us-1-u83u4llB0O">
+    <div class="container">
+      <div class="media-container-row">
+        <div class="col-12">
+          <h3 class="mbr-section-title align-center mb-5 mbr-fonts-style display-2">
+            <strong>Join Our Online Adventure</strong>
+          </h3>
+          <div class="social-list align-center">
+            <a class="iconfont-wrapper bg-facebook m-2 " target="_blank" href="#">
+              <span class="socicon-facebook socicon"></span>
+            </a>
+            <a class="iconfont-wrapper bg-twitter m-2" href="#" target="_blank">
+              <span class="socicon-twitter socicon"></span>
+            </a>
+            <a class="iconfont-wrapper bg-instagram m-2" href="#" target="_blank">
+              <span class="socicon-instagram socicon"></span>
+            </a>
+            <a class="iconfont-wrapper bg-tiktok m-2" href="#" target="_blank">
+              <span class="socicon-tiktok socicon"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .cid-u83u4lldya {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      background-color: transparent;
+    }
+
+    .cid-u83u4lldya .mbr-overlay {
+      background-color: #ffffff;
+      opacity: 0.4;
+    }
+
+    .cid-u83u4lldya form .mbr-section-btn {
+      text-align: center;
+      width: 100%;
+    }
+
+    .cid-u83u4lldya form .mbr-section-btn .btn {
+      display: inline-flex;
+    }
+
+    @media (max-width: 991px) {
+      .cid-u83u4lldya form .mbr-section-btn .btn {
+        width: 100%;
+      }
+    }
+
+    .cid-u83u4lldya .content-head {
+      max-width: 800px;
+    }
+  </style>
+  <section class="form5 cid-u83u4lldya" id="contact-form-3-u83u4lldya">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 content-head">
+          <div class="mbr-section-head mb-5">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+              <strong>Get in Touch Now!</strong>
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+          <form action="#" method="POST" class="mbr-form form-with-styler"
+            data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="">
+            <div class="row">
+              <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the
+                form!</div>
+              <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                Oops...! some problem!
+              </div>
+            </div>
+            <div class="dragArea row">
+              <div class="col-md col-sm-12 form-group mb-3" data-for="name">
+                <input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control" value=""
+                  id="name-form02-0">
+              </div>
+              <div class="col-md col-sm-12 form-group mb-3" data-for="email">
+                <input type="email" name="email" placeholder="Email" data-form-field="email" class="form-control"
+                  value="" id="email-form02-0">
+              </div>
+              <div class="col-12 form-group mb-3" data-for="url">
+                <input type="url" name="url" placeholder="Phone" data-form-field="url" class="form-control" value=""
+                  id="url-form5-0">
+              </div>
+              <div class="col-12 form-group mb-3" data-for="textarea">
+                <textarea name="textarea" placeholder="Message" data-form-field="textarea" class="form-control"
+                  id="textarea-form02-0"></textarea>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit"
+                  class="btn btn-primary display-7">Send Message</button></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .cid-u83u4llqmc {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      background-color: transparent;
+    }
+
+    .cid-u83u4llqmc .mbr-fallback-image.disabled {
+      display: none;
+    }
+
+    .cid-u83u4llqmc .mbr-fallback-image {
+      display: block;
+      background-size: cover;
+      background-position: center center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
+
+    .cid-u83u4llqmc .mbr-text {
+      color: #000000;
+    }
+
+    .cid-u83u4llqmc .mbr-section-subtitle {
+      color: #000000;
+      text-align: left;
+    }
+
+    .cid-u83u4llqmc .main-button {
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 767px) {
+      .cid-u83u4llqmc .main-button {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .cid-u83u4llqmc .mbr-section-subtitle,
+    .cid-u83u4llqmc .main-button {
+      color: #000000;
+    }
+
+    .cid-u83u4llqmc .google-map {
+      height: 30rem;
+      position: relative;
+      border-radius: 2rem;
+    }
+
+    .cid-u83u4llqmc .google-map iframe {
+      height: 100%;
+      width: 100%;
+      border-radius: 2rem;
+    }
+
+    .cid-u83u4llqmc .google-map [data-state-details] {
+      color: #6b6763;
+      height: 1.5em;
+      margin-top: -0.75em;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      width: 100%;
+    }
+
+    .cid-u83u4llqmc .google-map[data-state] {
+      background: #e9e5dc;
+    }
+
+    .cid-u83u4llqmc .google-map[data-state="loading"] [data-state-details] {
+      display: none;
+    }
+  </style>
+
+  <section class="contacts03 cid-u83u4llqmc" id="contacts-11-u83u4llqmc">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-4">
+          <div class="col-12 col-md-12">
+            <h5 class="mbr-section-title mbr-fonts-style mt-0 mb-4 display-2">
+              <strong>Reach Out</strong>
+            </h5>
+            <p class="mbr-section-subtitle mbr-fonts-style mt-0 mb-4 display-7">
+              Phone: <a href="">8454013391 & 8291045852</a>
+              <br>Email: baralashlesha@gmail.com
+              <br>Location: Mumbai India
+              <br>Adventure Hours: Mon-Fri: 9am-6pm
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-8 side-features">
+          <div class="google-map">
+            <iframe frameborder="0" style="border:0"
+              src="https://www.google.com/maps/embed/v1/place?key&#x3D;AIzaSyCt1265A4qvZy9HKUeA8J15AOC4SrCyZe4&amp;q&#x3D;Mumbai%20India"
+              allowfullscreen=""></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <style>
+    .cid-u83u4llpGE {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      background-color: #000000;
+    }
+
+    .cid-u83u4llpGE .social-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .cid-u83u4llpGE .social-row .soc-item {
+      margin: 8px;
+    }
+
+    .cid-u83u4llpGE .social-row .soc-item a:hover .mbr-iconfont,
+    .cid-u83u4llpGE .social-row .soc-item a:focus .mbr-iconfont {
+      background-color: #ffffff;
+    }
+
+    .cid-u83u4llpGE .social-row .soc-item a .mbr-iconfont {
+      width: 72px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 100%;
+      font-size: 32px;
+      background-color: #edefeb;
+      color: #000000;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .cid-u83u4llpGE .row-links {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .cid-u83u4llpGE .header-menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0;
+      margin-bottom: 0;
+    }
+
+    .cid-u83u4llpGE .header-menu li {
+      padding: 0 1rem 1rem 1rem;
+    }
+
+    .cid-u83u4llpGE .header-menu li p {
+      margin: 0;
+    }
+
+    .cid-u83u4llpGE .copyright {
+      margin-bottom: 0;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .cid-u83u4llpGE .mbr-section-title {
+      color: #ffffff;
+    }
+  </style>
+  <section class="footer3 cid-u83u4llpGE" once="footers" id="footer-6-u83u4llpGE">
+    <div class="container">
+      <div class="row">
+        <div class="row-links">
+          <ul class="header-menu">
+            <li class="header-menu-item mbr-fonts-style display-5">
+              <a href="#" class="text-white">Home</a>
+            </li>
+            <li class="header-menu-item mbr-fonts-style display-5">
+              <a href="#" class="text-white">About</a>
+            </li>
+            <li class="header-menu-item mbr-fonts-style display-5">
+              <a href="#" class="text-white">Services</a>
+            </li>
+            <li class="header-menu-item mbr-fonts-style display-5">
+              <a href="#" class="text-white">Contact</a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <script src="assets/parallax/jarallax.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>
+  <script src="assets/scrollgallery/scroll-gallery.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/ytplayer/index.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  <script src="assets/formoid/formoid.min.js"></script>
+
+  <script>
+
+    (function () {
+      var animationInput = document.createElement('input');
+      animationInput.setAttribute('name', 'animation');
+      animationInput.setAttribute('type', 'hidden');
+      document.body.append(animationInput);
+    })();
+
+  </script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var button = document.querySelector(".btn-primary");
+
+      button.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        // Get the ID of the target section from the button's href attribute
+        var targetId = button.getAttribute("href").substring(1); // Remove the "#" from the href
+
+        // Get the position of the target section relative to the viewport
+        var targetSection = document.getElementById(targetId);
+        var targetPosition = targetSection.getBoundingClientRect().top;
+
+        // Scroll the page to the target section
+        window.scrollTo({
+          top: window.scrollY + targetPosition, // Adjusted for current scroll position
+          behavior: 'smooth' // Smooth scrolling
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

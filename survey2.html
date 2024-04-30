@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mental Health Survey</title>
+    <style>
+        body {
+            font-family: Georgia, sans-serif;
+            background-color: #aee0ff;
+        }
+        .container {
+            width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #c7ebff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+	    font-family: 'Georgia' ,sans-serif; 
+            margin-bottom: 20px;
+        }
+        .question {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        .option {
+            margin-right: 20px;
+        }
+        textarea {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .flash-message {
+            text-align: center;
+            font-size: 16px;
+            margin-top: 20px;
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mental Health Survey</h1>
+        <form method="post">
+            {% for question_responses in questions_with_responses %}
+            <div class="question">{{ question_responses[0] }}</div>
+            <div class="options">
+                {% for option in question_responses[1:] %}
+                <div class="option">
+                    <input type="radio" id="response_{{ loop.index0 }}" name="response_{{ loop.index0 }}" value="{{ option }}">
+                    <label for="response_{{ loop.index0 }}">{{ option }}</label>
+                </div>
+                {% endfor %}
+            </div>
+            <br>
+            {% endfor %}
+            <div class="question">{{ text_question }}</div>
+            <textarea id="additional_symptoms" name="additional_symptoms" rows="4" cols="50"></textarea>
+            <br>
+            <input type="submit" value="Generate Report">
+        </form>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="flash-message">
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>

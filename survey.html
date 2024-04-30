@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mental Health Survey</title>
+    <style>
+        body {
+            font-family: Georgia, sans-serif;
+            background-color: #aee0ff;
+        }
+        .container {
+            width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #c7ebff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            font-family: 'Georgia', sans-serif;
+            margin-bottom: 20px;
+        }
+        .question {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .options {
+            margin-bottom: 40px;
+        }
+        .option {
+            margin-bottom: 10px;
+        }
+        textarea {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #000;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .flash-message {
+            text-align: center;
+            font-size: 16px;
+            margin-top: 20px;
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mental Health Survey</h1>
+        <form method="post" action="/">
+            <!-- Dynamic questions and options will be added here -->
+            <div id="questionsContainer">
+                <!-- JavaScript will populate this -->
+            </div>
+
+            <!-- Additional text box question -->
+            <div class="question">{{ text_question }}</div>
+            <textarea id="additional_symptoms" name="additional_symptoms" rows="4" cols="50"></textarea>
+            <br>
+            <input type="submit" name="generate_report" value="Generate Report">
+        </form>
+        <!-- Flash messages -->
+        <div class="flash-message">
+            <!-- Flash message content will be added dynamically -->
+        </div>
+    </div>
+
+    <script>
+        // Function to dynamically generate questions and options
+        function generateQuestions(questionsData) {
+            const questionsContainer = document.getElementById('questionsContainer');
+            questionsData.forEach((questionData, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question';
+                questionDiv.innerText = `Question ${index + 1}: ${questionData.question}`;
+                questionsContainer.appendChild(questionDiv);
+
+                const optionsDiv = document.createElement('div');
+                optionsDiv.className = 'options';
+                questionData.options.forEach((option, optionIndex) => {
+                    const optionDiv = document.createElement('div');
+                    optionDiv.className = 'option';
+                    const radioInput = document.createElement('input');
+                    radioInput.type = 'radio';
+                    radioInput.name = `response_${index + 1}`;
+                    radioInput.value = option;
+                    radioInput.id = `response_${index + 1}_${optionIndex + 1}`;
+                    optionDiv.appendChild(radioInput);
+                    const label = document.createElement('label');
+                    label.innerText = option;
+                    label.htmlFor = `response_${index + 1}_${optionIndex + 1}`;
+                    optionDiv.appendChild(label);
+                    optionsDiv.appendChild(optionDiv);
+                });
+                questionsContainer.appendChild(optionsDiv);
+            });
+        }
+
+        // Fetch questions from the server
+        fetch('/get_questions')
+            .then(response => response.json())
+            .then(data => {
+                generateQuestions(data.questions);
+            })
+            .catch(error => {
+                console.error('Error fetching questions:', error);
+            });
+    </script>
+</body>
+</html>
